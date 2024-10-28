@@ -78,13 +78,15 @@ void printHighestScorers(const studentType students[], int size, int highestScor
 // function to print all students' data
 void printAllStudents(const studentType students[], int size) {
     cout << "\nComplete List of Students:\n";
-    cout << left << setw(15) << "Last Name" << setw(15) << "First Name" << setw(10) << "Score" << "Grade" << endl;
+    cout << left << setw(30) << "Name" << setw(10) << "Score" << "Grade" << endl;
     cout << "---------------------------------------------------\n";
     for (int i = 0; i < size; i++) {
-        cout << left << setw(15) << (students[i].studentLName + ",")  // Add comma after last name
-             << setw(15) << students[i].studentFName 
+        // Merge last name and first name with a comma in between
+        string fullName = students[i].studentLName + ", " + students[i].studentFName;
+        cout << left << setw(30) << fullName 
              << setw(10) << students[i].testScore 
              << students[i].grade << endl;
     }
 }
+
 
