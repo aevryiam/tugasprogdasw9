@@ -81,7 +81,6 @@ void printAllStudents(const studentType students[], int size) {
     cout << left << setw(30) << "Name" << setw(10) << "Score" << "Grade" << endl;
     cout << "---------------------------------------------------\n";
     for (int i = 0; i < size; i++) {
-        // Merge last name and first name with a comma in between
         string fullName = students[i].studentLName + ", " + students[i].studentFName;
         cout << left << setw(30) << fullName 
              << setw(10) << students[i].testScore 
